@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://shivam:shivam@cohort.5m2fcsv.mongodb.net/Payments_App"
-);
+mongoose.connect(process.env.MONGODB_URL);
 
 const userSchema = new mongoose.Schema({
   email: {
